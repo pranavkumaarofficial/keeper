@@ -1,8 +1,8 @@
 # keeper
 
-[![PyPI](https://img.shields.io/pypi/v/vozinha-keeper?color=brightgreen&label=PyPI)](https://pypi.org/project/vozinha-keeper/)
-[![Python](https://img.shields.io/pypi/pyversions/vozinha-keeper)](https://pypi.org/project/vozinha-keeper/)
-[![Downloads](https://img.shields.io/pypi/dm/vozinha-keeper?color=blue)](https://pypi.org/project/vozinha-keeper/)
+[![PyPI](https://img.shields.io/pypi/v/vozinha-keeper?color=brightgreen&label=PyPI&cacheSeconds=1800)](https://pypi.org/project/vozinha-keeper/)
+[![Python](https://img.shields.io/pypi/pyversions/vozinha-keeper?cacheSeconds=1800)](https://pypi.org/project/vozinha-keeper/)
+[![Downloads](https://img.shields.io/pypi/dm/vozinha-keeper?color=blue&cacheSeconds=1800)](https://pypi.org/project/vozinha-keeper/)
 [![Publish](https://github.com/pranavkumaarofficial/keeper/actions/workflows/publish.yml/badge.svg)](https://github.com/pranavkumaarofficial/keeper/actions/workflows/publish.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
