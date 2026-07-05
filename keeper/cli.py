@@ -176,13 +176,12 @@ def demo(args):
         print("no images in the pool — add one with `keeper --add IMG`, "
               "or pass --dir FOLDER")
         return
-    width = args.width or 70
     print(art.c("\x1b[1;37m", f"\n  comparing styles for: {path}"))
     if args.crop:
         print(art.c("\x1b[0;90m", "  (center-cropped)"))
     for style in ("color", "ascii", "mono"):
         print(art.c("\x1b[1;36m", f"\n  ── {style} " + "─" * 40))
-        lines, err = render(path, width, style, args.crop)
+        lines, err = render(path, args.width, style, args.crop)
         if err:
             print(art.c("\x1b[0;90m", f"  ({err})"))
             continue
@@ -207,9 +206,7 @@ def show(args):
     if not args.drawn:
         path, label = pool.pick(args.dir)
         if path:
-            width = args.width or (64 if args.style == "color" else 90)
-            crop = args.crop if args.crop else (args.style != "color")
-            lines, err = render(path, width, args.style, crop)
+            lines, err = render(path, args.width, args.style, args.crop)
             if err:
                 print(art.c("\x1b[0;90m", f"  ({err})"))
     if lines:
@@ -233,10 +230,12 @@ def main(argv=None):
                     default="ascii",
                     help="render style: color (photo-like), ascii (colored "
                          "characters, default), mono (green phosphor)")
-    ap.add_argument("-w", "--width", type=int, default=None,
-                    help="render width in characters (default: per style)")
-    ap.add_argument("--crop", action="store_true",
-                    help="center-crop to the subject (great for busy photos)")
+    ap.add_argument("-w", "--width", type=int, default=90,
+                    help="render width in characters (default: 90)")
+    ap.add_argument("--crop", dest="crop", action="store_true", default=True,
+                    help="center-crop to the subject (on by default)")
+    ap.add_argument("--no-crop", dest="crop", action="store_false",
+                    help="render the full frame instead of center-cropping")
     ap.add_argument("--drawn", action="store_true",
                     help="force the built-in hand-drawn ASCII keeper")
     ap.add_argument("--no-anim", action="store_true", help="disable animation")

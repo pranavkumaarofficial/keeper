@@ -17,11 +17,12 @@ pip install vozinha-keeper
 ## Usage
 
 ```bash
-keeper                        # renders a random image as ASCII art + ACCESS DENIED
+keeper                        # ASCII art, center-cropped at width 90, + ACCESS DENIED
 keeper --style color          # truecolor half-block, looks like a photo
 keeper --style mono           # green phosphor retro terminal
-keeper --crop -w 90           # cropped, wider -- best look for most images
-keeper --demo --crop -w 90    # compare all 3 styles side by side
+keeper --no-crop              # render the full frame instead of cropping
+keeper -w 120                 # wider render
+keeper --demo                 # compare all 3 styles side by side
 ```
 
 Works out of the box. Ships with bundled sample images so there's something to render on a fresh install.
@@ -107,7 +108,7 @@ Edit the `DANGER` list to add your own.
 - **color** -- truecolor half-block. Two pixels per character cell. Busy photos with lots of detail work best here.
 - **mono** -- green phosphor brightness ramp. Retro CRT look. Works on any terminal.
 
-Use `--crop` to center-crop to the subject. Use `-w` to set render width. `--crop -w 90` is the sweet spot for most images.
+Center-crop at width 90 is the default -- the sweet spot for most images. Pass `--no-crop` to render the full frame, or `-w` to change the width.
 
 ## About
 
