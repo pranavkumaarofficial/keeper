@@ -1,12 +1,14 @@
 # keeper
+<img width="389" height="397" alt="image" src="https://github.com/user-attachments/assets/aa60a4f7-8267-41db-a530-c539d7e5dba2" />
 
 A terminal tribute to Vozinha -- the 40-year-old Cape Verde goalkeeper who went viral at the 2026 World Cup for denying everyone. Spain, Messi, all of them. Blocked.
 
-`keeper` renders Vozinha (or any image you throw at it) as ASCII art in your terminal, then slams an `ACCESS DENIED` screen. Because that's what keepers do.
+`keeper` renders Vozinha (or any image you throw at it) as ASCII art in your terminal, then slams an `ACCESS DENIED` screen. Because that's what he does literally.
 
 It also works as a Claude Code hook that blocks dangerous shell commands before they run. Vozinha doesn't care who you are. He dives full-stretch and denies you.
 
-<!-- screenshots go here -->
+<img width="960" height="1200" alt="image" src="https://github.com/user-attachments/assets/8a7ad291-6d2d-4476-9f78-d53da17823bc" />
+
 
 ## Install
 
