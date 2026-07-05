@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "vozinha-keeper"
+version = "0.1.0"
+description = "A goalkeeper who denies your terminal access. Renders a random image from a folder as terminal pixels."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [{ name = "Sachin", email = "sachinspkofficialyt@gmail.com" }]
+keywords = ["terminal", "ascii-art", "cli", "ansi", "fun", "worldcup"]
+classifiers = [
+    "Environment :: Console",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Artistic Software",
+]
+dependencies = ["Pillow>=9"]
+
+[project.urls]
+Homepage = "https://github.com/pranavkumaarofficial/keeper"
+Issues = "https://github.com/pranavkumaarofficial/keeper/issues"
+
+# This is what makes `keeper` a command after `pip install`:
+[project.scripts]
+keeper = "keeper.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["keeper"]
+# Non-Python files inside the package (the sample PNGs) are included automatically.
