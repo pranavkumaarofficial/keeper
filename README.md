@@ -1,4 +1,5 @@
 # keeper
+<img width="389" height="397" alt="image" src="https://github.com/user-attachments/assets/aa60a4f7-8267-41db-a530-c539d7e5dba2" />
 
 A terminal tribute to Vozinha -- the 40-year-old Cape Verde goalkeeper who went viral at the 2026 World Cup for denying everyone. Spain, Messi, all of them. Blocked.
 
