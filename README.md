@@ -1,11 +1,20 @@
 # keeper
+
+[![PyPI](https://img.shields.io/pypi/v/vozinha-keeper?color=brightgreen&label=PyPI)](https://pypi.org/project/vozinha-keeper/)
+[![Python](https://img.shields.io/pypi/pyversions/vozinha-keeper)](https://pypi.org/project/vozinha-keeper/)
+[![Downloads](https://img.shields.io/pypi/dm/vozinha-keeper?color=blue)](https://pypi.org/project/vozinha-keeper/)
+[![Publish](https://github.com/pranavkumaarofficial/keeper/actions/workflows/publish.yml/badge.svg)](https://github.com/pranavkumaarofficial/keeper/actions/workflows/publish.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 <img width="389" height="397" alt="image" src="https://github.com/user-attachments/assets/aa60a4f7-8267-41db-a530-c539d7e5dba2" />
 
-A terminal tribute to Vozinha -- the 40-year-old Cape Verde goalkeeper who went viral at the 2026 World Cup for denying everyone. Spain, Messi, all of them. Blocked.
+A terminal tribute to Vozinha -- the 40-year-old Cape Verde goalkeeper who went viral at the 2026 World Cup for denying everyone. Spain, Messi, all of them. Turned away at the line.
 
-`keeper` renders Vozinha (or any image you throw at it) as ASCII art in your terminal, then slams an `ACCESS DENIED` screen. Because that's what he does literally.
+Now he does the same thing to Claude Code.
 
-It also works as a Claude Code hook that blocks dangerous shell commands before they run. Vozinha doesn't care who you are. He dives full-stretch and denies you.
+`keeper` renders Vozinha (or any image you throw at it) as ASCII art in your terminal, then slams up an `ACCESS DENIED` screen. That's the joke. That's what a keeper does -- you come at the goal, he says no.
+
+But the real reason it exists: it plugs into **Claude Code** as a hook. Before Claude runs a shell command, Vozinha inspects it. `rm -rf`, force-push to main, `chmod 777`, a fork bomb -- he dives full-stretch and blocks it. Exit code 2, command denied. Your safe commands stroll right through. He doesn't care that it's an AI. Nobody gets past him.
 
 <img width="960" height="1200" alt="image" src="https://github.com/user-attachments/assets/8a7ad291-6d2d-4476-9f78-d53da17823bc" />
 
@@ -39,9 +48,11 @@ keeper --dir ~/Pictures/keepers      # one-off folder
 
 It picks a random image from the pool each run. The pool checks (in order): `--dir` flag, `$KEEPER_IMAGES` env var, `~/.keeper/images`, bundled samples.
 
-## Claude Code hook
+## Blocking Claude Code (the whole point)
 
-This is the real use case. Keeper runs as a PreToolUse hook in Claude Code. Before Claude executes a shell command, Vozinha inspects it. If it matches a dangerous pattern -- `rm -rf`, force-push to main, `chmod 777`, fork bombs, `DROP TABLE` -- the keeper dives in and blocks it. Exit code 2. Command denied. Safe commands pass through untouched.
+This is what keeper is actually for. It runs as a PreToolUse hook in Claude Code, so it stands between Claude and your shell. Every time Claude wants to run a command, Vozinha reads it first. Match a dangerous pattern -- `rm -rf`, force-push to main, `chmod 777`, a fork bomb, `DROP TABLE` -- and the keeper dives in. Exit code 2. Command denied, and the AI gets the ACCESS DENIED screen instead of your filesystem. Safe commands pass through untouched, no ceremony.
+
+Think of it as a last line of defence for the 2am moment when you've told Claude to "just clean up the repo" and you're not watching closely.
 
 ### One-command setup
 
@@ -112,11 +123,17 @@ Edit the `DANGER` list to add your own.
 
 Center-crop at width 90 is the default -- the sweet spot for most images. Pass `--no-crop` to render the full frame, or `-w` to change the width.
 
+## Known issues
+
+**Rendering quality depends on your terminal, and that needs work.** The output is tuned for a truecolor terminal (Windows Terminal, iTerm2, most modern Linux terminals) at a decent width. On terminals without 24-bit color, narrower than 90 columns, or with unusual font aspect ratios, the render can wrap, wash out, or look squashed. Right now there's no auto-detection -- keeper just assumes you've got the good setup.
+
+This is the main thing I'd like fixed. If you want to make the render adapt to different terminals -- detecting truecolor vs. 256-color vs. mono, capping width to the actual terminal size, handling font aspect ratio -- **please open a PR.** That's exactly the kind of contribution this project needs. Bug reports about how it looks on your specific terminal (with a screenshot) are welcome too.
+
 ## About
 
-Built as a fun weekend project after watching Vozinha deny everything at the 2026 World Cup. The man is 40 years old and he's out there making saves that have no business being made.
+A weekend project made after watching Vozinha deny the entire World Cup. The man is 40 years old and he was out there pulling off saves that had no business being made, against players half his age. Least I could do was put him in front of my terminal too.
 
-This is a tribute. Nothing official, just a fan who thought it would be funny to have a goalkeeper blocking your terminal commands.
+Nothing official. Just a fan who thought it'd be funny -- and then kind of useful -- to have a Cape Verdean goalkeeper standing between an AI and my filesystem. Obrigado, Vozinha.
 
 ## License
 
