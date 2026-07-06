@@ -8,13 +8,12 @@
 
 <img width="389" height="397" alt="image" src="https://github.com/user-attachments/assets/aa60a4f7-8267-41db-a530-c539d7e5dba2" />
 
-A terminal tribute to Vozinha -- the 40-year-old Cape Verde goalkeeper who went viral at the 2026 World Cup for denying everyone. Spain, Messi, all of them. Turned away at the line.
+A terminal tribute to Vozinha -- the 40-year-old Cape Verde goalkeeper who went viral at the 2026 World Cup for denying everyone (Spain, Messi, all of them)
+Turned away at the line. Now he does the same thing to Claude Code.
 
-Now he does the same thing to Claude Code.
+`keeper` renders Vozinha (or any image you throw at it) as ASCII art in your terminal, then slams up an `ACCESS DENIED` screen. That's the joke. Literally he "blocks" the command like how he blocked the goals.
 
-`keeper` renders Vozinha (or any image you throw at it) as ASCII art in your terminal, then slams up an `ACCESS DENIED` screen. That's the joke. That's what a keeper does -- you come at the goal, he says no.
-
-But the real reason it exists: it plugs into **Claude Code** as a hook. Before Claude runs a shell command, Vozinha inspects it. `rm -rf`, force-push to main, `chmod 777`, a fork bomb -- he dives full-stretch and blocks it. Exit code 2, command denied. Your safe commands stroll right through. He doesn't care that it's an AI. Nobody gets past him.
+But the real reason it exists: it plugs into **Claude Code** as a hook. Before Claude runs a shell command, Vozinha inspects it. `rm -rf`, force-push to main, `chmod 777`, a fork bomb -- he dives full-stretch and blocks it. Exit code 2, command denied. Your safe commands stroll right through. Nobody gets past him lol!
 
 <img width="960" height="1200" alt="image" src="https://github.com/user-attachments/assets/8a7ad291-6d2d-4476-9f78-d53da17823bc" />
 
