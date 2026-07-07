@@ -44,8 +44,10 @@ Run it yourself:
 
     python analysis/siege_curve.py
 
+## The distribution of siege games per tournament, 32-team vs 48-team
 <img width="1659" height="1019" alt="image" src="https://github.com/user-attachments/assets/d7921ff1-c2c5-47f4-a913-6ba9713ca7ff" />
 
+## The exponential curve, the 8-save "siege line," and where Vozinha vs Spain lands
 <img width="1659" height="1019" alt="image" src="https://github.com/user-attachments/assets/99d2680b-1b04-4325-a915-19db0bd4717f" />
 
 ## CLI Install
