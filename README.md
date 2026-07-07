@@ -43,8 +43,12 @@ matches; the other half is that each game is now more lopsided.
 Run it yourself:
 
     python analysis/siege_curve.py
-    
-## Install
+
+<img width="1659" height="1019" alt="image" src="https://github.com/user-attachments/assets/d7921ff1-c2c5-47f4-a913-6ba9713ca7ff" />
+
+<img width="1659" height="1019" alt="image" src="https://github.com/user-attachments/assets/99d2680b-1b04-4325-a915-19db0bd4717f" />
+
+## CLI Install
 
 ```
 pip install vozinha-keeper
