@@ -5,7 +5,8 @@ build-backend = "hatchling.build"
 [project]
 name = "vozinha-keeper"
 version = "0.1.0"
-description = "A goalkeeper who denies your terminal access. Renders a random image from a folder as terminal pixels."
+keywords = ["claude-code", "ai-safety", "cli", "ascii-art", "terminal", "hook", "world-cup", "developer-tools"]
+description = "A Claude Code safety hook that blocks dangerous shell commands with a goalkeeper. Renders Vozinha (2026 World Cup) as terminal ASCII art and denies the command."
 readme = "README.md"
 requires-python = ">=3.9"
 license = "MIT"
