@@ -15,9 +15,35 @@ Turned away at the line. Now he does the same thing to Claude Code.
 
 But the real reason it exists: it plugs into **Claude Code** as a hook. Before Claude runs a shell command, Vozinha inspects it. `rm -rf`, force-push to main, `chmod 777`, a fork bomb -- he dives full-stretch and blocks it. Exit code 2, command denied. Your safe commands stroll right through. Nobody gets past him lol!
 
+### The story in numbers
+
+At 40 years old, Vozinha saved all **7** of Spain's shots on target in a 0-0
+draw (Cape Verde ranked 67th, Spain 2nd), kept another clean sheet against
+Saudi Arabia, then made **8** saves against Messi's Argentina in the Round of
+32. He finished the tournament with an **.782** save rate (18 saves from 23
+shots on target), and Cape Verde never lost a match inside 90 minutes. He
+became the oldest player ever to appear in a nation's World Cup debut, and the
+third-oldest goalkeeper to keep a World Cup clean sheet, after Peter Shilton
+and Dino Zoff.
+
 <img width="960" height="1200" alt="image" src="https://github.com/user-attachments/assets/8a7ad291-6d2d-4476-9f78-d53da17823bc" />
 
+## The data behind it
 
+I got curious about *why* 2026 has been such a goalkeeper's World Cup, so I
+built a small Monte Carlo model I call the **Siege Curve**. Short version: the
+48-team format produces roughly **3x** the goalkeeper "siege games" (8+ saves)
+of a 32-team one, even though the field only grew by 50%. Half of that is more
+matches; the other half is that each game is now more lopsided.
+
+- Model + figures: [`analysis/siege_curve.py`](analysis/siege_curve.py)
+- The human story: [Medium — the Vozinha article](ADD_MEDIUM_LINK_1)
+- The data-science write-up: [Medium — the Siege Curve](ADD_MEDIUM_LINK_2)
+
+Run it yourself:
+
+    python analysis/siege_curve.py
+    
 ## Install
 
 ```
